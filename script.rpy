@@ -416,6 +416,7 @@ menu:
         voice "doublages_jp1/scene1/scene4_sj10.ogg"
         sj "Expérimentale !"
 
+        sound "doublages_jp1/scene1/scene4_jp7.ogg"
         "C'était véritablement un chouette objet."
         "Voici qui concluait les taches de ravitaillement de notre héros."
 
@@ -639,7 +640,7 @@ show miroir2
 "C'était celui de Saint Gède !"
 "Saint Gède lui avait volé son visage !"
 
-# play sound "jp_singed.ogg"
+play sound "jp_singed_unhuman_scream"
 "Le cri que Jean Plank poussa ne pourrait être décrit."
 "Une sonorité à la limite de l'inhumain, traduisant la haine qui rongeait son cœur et l'infinie tristesse qui l'envahissait."
 "Il se dépêcha d'aller ramasser son tricorne, mais rien n'effacerait ce qu'il ressentait actuellement."
