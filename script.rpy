@@ -99,13 +99,13 @@ voice "doublages_jp1/scene2/scene2_jp1.ogg"
 jp "Haha !"
 
 voice "doublages_jp1/scene2/scene2_urgo1.ogg"
-urgo "Jean Plank ?! Ça alors, quelle surprise ! Je ne t'ai pas revu depuis ce jour où tu voulais éviter de payer et où j'ai consenti à te laisser fuir lâchement."
+urgo "Jean Plank ?! Ça alors, quelle surprise ! Je ne t'ai pas revu depuis ce jour où tu voulais éviter de payer et où j'ai consenti à te laisser fuir tel un lâche."
 
 voice "doublages_jp1/scene2/scene2_jp2.ogg"
 jp "Inutile de ressasser le passé, j'ai bien changé depuis cette époque."
 
 voice "doublages_jp1/scene2/scene2_urgo2.ogg"
-urgo "Effectivement, si tu es enfin revenu me régler ta dette."
+urgo "Effectivement, puisque tu es enfin revenu me régler ta dette."
 
 voice "doublages_jp1/scene2/scene2_jp3.ogg"
 jp "Oulah, quand même pas à ce point !"
@@ -134,10 +134,10 @@ stop alder
 
 hide jpcrayonurgo
 voice "doublages_jp1/scene2/scene2_urgo5.ogg"
-urgo "Si tu n'es pas revenu pour me payer, alors pourquoi est tu là ?"
+urgo "Si tu n'es pas venu me rendre mon argent, alors pourquoi es tu là ?"
 
 voice "doublages_jp1/scene2/scene2_jp6.ogg"
-jp "Pour remplir mon bateau à moindre frais."
+jp "Mais enfin, pour remplir mon bateau à moindre frais !"
 
 label fight_urgo:
 
