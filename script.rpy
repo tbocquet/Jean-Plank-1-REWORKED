@@ -33,6 +33,7 @@ menu:
 
 scene jp_arrive
 
+play ambiance "sound/sound_mouettes.ogg"
 play music "music/jp_theme.ogg"
 "Jean Plank était content."
 "Après un périlleux voyage de plusieurs semaines, il avait enfin réussi à regagner Bill's Water."
@@ -43,17 +44,17 @@ show introjp1
 "Sourire aux lèvres, Jean Plank se tourna vers son nouveau compagnon."
 
 voice "doublages_jp1/scene1/scene1_jp1.ogg"
-jp "Hé ! Quel était ton nom déjà ?"
+jp "Hé ! C'était quoi ton nom, déjà ?"
 
-#Adoujimadisempala
 voice "doublages_jp1/scene1/scene1_lucien1.ogg"
-lucienintro "Lucien, mais mes amis m'appellent Jean-François."
+lucienintro "Je m'appelle Lucien, mais mes amis m'appellent Jean-François."
 
 voice "doublages_jp1/scene1/scene1_jp2.ogg"
-jp "Et bien Lucien, bienvenue au bercail !"
+jp "Et bien Lucien, bienvenue à Bill's Water !"
 
 "Pour la petite histoire, Jean-François était un indigène ayant rejoint l'équipage de notre bienheureux capitaine il y a peu."
 
+play ambiance "sound/sound_feu.ogg"
 show village_lucien
 "Un beau matin, Jean Plank avait débarqué dans son village pour le piller et tout saccager."
 "Son méfait accompli, il y avait ensuite mis le feu pour finir en beauté."
@@ -68,9 +69,11 @@ show lucien_pirate
 
 hide village_lucien
 hide lucien_pirate
+play ambiance "sound/sound_mouettes.ogg"
 "Mais revenons à notre histoire."
 
 show emeute
+play ambiance "sound/sound_port.ogg"
 "Jean Plank posa pied à terre et salua triomphalement les nombreux villageois qui étaient venus l'accueillir."
 "Il avait cependant beaucoup trop à faire pour pouvoir s'amuser avec la plèbe."
 "Il fallait organiser les préparatifs pour son prochain voyage et ravitailler son navire."
@@ -78,6 +81,7 @@ show emeute
 
 voice "doublages_jp1/scene1/scene1_jp3.ogg"
 jp "OK Lucien ! Allons chez Urgo !"
+stop ambiance
 
 
 #############################################################################################################################
@@ -88,13 +92,13 @@ jp "OK Lucien ! Allons chez Urgo !"
 
 scene boucherie
 
-play music "music/boucherie.ogg"
 "Urgo, dit \"Le Boucher\" était une vieille connaissance de notre bien aimé capitaine."
 "Ayant eu quelques problèmes avec la justice pour infractions majeures sur mineurs de plus de 18 ans, il avait déménagé dans un coin reculé."
 "Jean Plank poussa la porte de l'établissement et entra en hurlant."
 
 show urgo
 play sound "sound/violent_open_door.ogg"
+play music "music/boucherie.ogg"
 voice "doublages_jp1/scene2/scene2_jp1.ogg"
 jp "Haha !"
 
@@ -173,10 +177,15 @@ menu:
         
 
 show commentquonfait
+$renpy.sound.set_volume(0.00, delay=0, channel='music')
+play alder "music/kpop.ogg"
 voice "doublages_jp1/scene2/scene2_jp7.ogg"
 jp "Regarde, c'est comme ça qu'on fait !"
 
 show lucien_focus
+stop alder
+play sound "sound/scratch.ogg"
+$renpy.sound.set_volume(1.00, delay=0, channel='music')
 voice "doublages_jp1/scene2/scene2_lucien1.ogg"
 lucienintro "Concentre toi plutôt sur ton combat-là !"
 
@@ -191,12 +200,12 @@ jp "Gibier de potence !"
 show bras
 "Puis il lui trancha le bras gauche d'un grand coup de sabre."
 
-voice "doublages_jp1/scene2/scene2_jp9.ogg" #jp "Ce ne sont pas de simples oranges !"
+# voice "doublages_jp1/scene2/scene2_jp9.ogg" #jp "Ce ne sont pas de simples oranges !"
 "Et oui, Jean Plank était aussi sanguinaire que les oranges qu'il consomme."
 
 show jp_sort_urgo
-voice "doublages_jp1/scene2/scene2_jp10.ogg"
-jp "Aller, à la prochaine !"
+voice "doublages_jp1/scene2/scene2_jp9.ogg"
+jp "Allez, à la prochaine !"
 jp "Avait-il dit en partant fièrement."
 
 
@@ -207,6 +216,7 @@ jp "Avait-il dit en partant fièrement."
 #############################################################################################################################
 
 scene lucien_blessure
+play ambiance "sound/sound_forêtambient.ogg"
 play music "music/lucien_rituel.ogg"
 
 "En retournant vers la ville, Jean Plank remarqua alors que son comparse avait du mal à suivre."
@@ -258,7 +268,7 @@ show lucien_fumee2
 show lucien_transform
 "UN MAGICIEN !"
 
-
+play ambiance "sound/sound_forêtambient.ogg"
 play music "music/jp_theme.ogg"
 show lucien_magie
 
@@ -277,6 +287,7 @@ voice "doublages_jp1/scene3/scene3_lucien5.ogg"
 lucien "C'est une légende de mon village. Celle que Maman elle me racontait le soir devant le feu. Elle disait : la Magie noire c'est le vaudou c'est le mal, mais le feu, lui, il est là pour t'éclairer. "
 
 "Jean Plank ainsi convaincu, il était temps d'aller chercher de la poudre."
+stop sound
 
 
 
@@ -286,12 +297,13 @@ lucien "C'est une légende de mon village. Celle que Maman elle me racontait le 
 #                                                                                                                           #
 #############################################################################################################################
 
-
+play ambiance "sound/sound_village.ogg"
 scene exterieur_entrepot
 "Quelques minutes plus tard, nos deux compères entraient chez le fournisseur habituel de Jean Plank."
 "Comme à son habitude, ce dernier hurla."
 
 show entrepot
+stop ambiance
 play music "music/religieux_shop.ogg"
 voice "doublages_jp1/scene4/scene4_jp1.ogg"
 play sound "sound/violent_open_door.ogg"
@@ -357,7 +369,7 @@ menu:
         "Rusé comme une huître, Jean Plank prit un air de surprise en pointant du doigt un bidule derrière Saint Gède."
 
         voice "doublages_jp1/scene4/scene4_jp5.ogg"
-        jp "Attention, t'as une potion qui crame !"
+        jp "Derrière toi ! Tu... t'as une potion qui crame !"
 
         play sound "sound/metalgear.ogg"
         show singed_vol2
@@ -416,7 +428,7 @@ menu:
         voice "doublages_jp1/scene4/scene4_sj10.ogg"
         sj "Expérimentale !"
 
-        sound "doublages_jp1/scene4/scene4_jp7.ogg"
+        voice "doublages_jp1/scene4/scene4_jp7.ogg"
         "C'était véritablement un chouette objet."
         "Voici qui concluait les taches de ravitaillement de notre héros."
 
@@ -431,6 +443,7 @@ menu:
 #############################################################################################################################
 
 play music "music/sunset.ogg"
+play ambiance "sound/sound_forêtambient.ogg"
 scene jardin_mf
 "Jean Plank se réveilla quelques heures plus tard."
 "Son regard était rivé sur le ciel obscurci du crépuscule."
@@ -494,6 +507,7 @@ jp "Tu oses me défier ?"
 voice "doublages_jp1/scene5/scene5_mf7.ogg"
 mf "Ouais j'ose, ouais !"
 
+stop ambiance
 show FIAK
 "N'écoutant que leurs instincts les plus primaires, nos deux amants se lancèrent alors à corps perdu dans leur confrontation."
 
@@ -608,6 +622,7 @@ pause
 #############################################################################################################################
 
 play music "music/ruines.ogg"
+stop sound
 show ruines1
 "Jean Plank regarda autour de lui :"
 "Il ne restait que des ruines."
@@ -707,6 +722,7 @@ play sound "sound/impact.ogg"
 pause
 
 hide ecran_noir
+stop sound
 show jp_perdu
 
 voice "doublages_jp1/scene7/scene7_jp1.ogg"
@@ -847,16 +863,21 @@ label credits:
 "Montage : Le Sublime Shiroi Maô\nAssistant montage : L'astucieux Monsieur Styrale\n"
 "Directeur de recherche : Le très estimé Lucas HAMMERER\nAssistant chercheur : Thomas BOCQUET"
 "Directeur artistique : Séphultura \nConseiller artistique : LucianAteMyKFC"
-"Digital Painteur presque de qualité : ShiroiMaô\nDirecteurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX\n"
+"Directeurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX\n"
 "Doublage :"
 "MissFourtout : La très généreuse génitrice de Monsieur Styrale\nJeanPlank, Lucien le magicien : ShiroiMaô qui en reste sans voix\n"
 "Urgo, Saint Gède et Odin : Monsieur Styrale qui a donc acquis une expérience professionelle dans le doublage"
 "Remerciements à la famille de Monsieur Lucas pour avoir le soutien moral et les studios"
 "Remerciement à Monsieur Simon comme catalyseur de haine et surtout pour NE PAS AVOIR ÉTÉ LÀ !"
-"Jeu réalisé avec le moteur Renpy"
-pause
-"FUCK ME PLEASE !"
-pause
+if potion == 0:
+    "Merci d'avoir joué à cet épisode ! La suite, Jean Plank II - Valhalla U Akbar, est déjà disponible sur jeanplank.blbl.ch"
+
+if potion == 1:
+    "Merci d'avoir joué à cet épisode ! La suite, Jean Plank II - Les Flammes de la Vengeance, est déjà disponible sur jeanplank.blbl.ch"
+# "Jeu réalisé avec le moteur Renpy"
+# pause
+# "FUCK ME PLEASE !"
+# pause
 menu:
     "Revenir au menu principal":
         stop sound

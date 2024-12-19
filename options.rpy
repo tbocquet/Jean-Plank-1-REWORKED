@@ -32,7 +32,7 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. To insert a blank line
 ## between paragraphs, write \n\n.
 
-define gui.about = _("Jean Plank est un Visual Novel parodique et n'est en aucun cas à prendre au premier degré. En cas de plaintes, de réclamations ou de demande de procès, veuillez passer par l'onglet \"Contact\" du site web jeanplank.blbl.ch !\n\nListe des musiques utilisées :\nLeague of Legends : Butcher's Bridge - Victory\nLeague of Legends : Gangplank Theme\nHades : Final Expense\nBaka To Test : Koware Kake no Chabudai\nRuined King : Settling The Score\nAssassin's Creed Valhalla : Kingdom Of Wessex (Encounter)\nMagic System : Magic In The Air\n")
+define gui.about = _("Jean Plank est un Visual Novel parodique et n'est en aucun cas à prendre au premier degré. En cas de plaintes, de réclamations ou de demande de procès, veuillez passer par l'onglet \"Contact\" du site web jeanplank.blbl.ch !\n\nListe des musiques utilisées :\nLeague of Legends : Butcher's Bridge - Victory\nLeague of Legends : Gangplank Theme\nPokemon Platinum Version : Veilstone City (Day)\nBaka To Test : Koware Kake no Chabudai\nRuined King : Settling The Score\nAssassin's Creed Valhalla : Kingdom Of Wessex (Encounter)\nMagic System : Magic In The Air\nHades : Final Expense\nRuined King : Meet Me at Butcher's Bridge\nFullmetal Alchemist Brotherhood : Hum of the Streets\nOctopath Traveller : Torrent of Evil\nDark Souls : Nameless Song\nKill La Kill - Rhythm Enforcement Type Two-Star Goku Uniform")
 
 
 
@@ -166,6 +166,7 @@ define config.window_icon = "gui/window_icon.png"
 
 init python:
     renpy.music.register_channel("alder", "sfx", True)
+    renpy.music.register_channel("ambiance", "sfx", True)   
 
     ## Les fonctions suivantes prennent en paramètres un format de fichier. Les
     ## formats de fichiers ne sont pas sensibles à la casse et correspondent au
