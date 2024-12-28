@@ -17,12 +17,12 @@ scene mainmenujp2
 $ potion = 0
 $ censure = 0
 
-menu:
-    "Jouer à la version tout public":
-        $ censure = 1
-
-    "Jouer à la version non censurée ":
-        $ censure = 0
+#menu:
+#    "Jouer à la version tout public":
+#        $ censure = 1
+#
+#    "Jouer à la version non censurée ":
+#        $ censure = 0
 
 
 #############################################################################################################################
@@ -147,6 +147,7 @@ label fight_urgo:
 
 scene couperet
 play music "music/fighturgo.ogg"
+#play music "music/UrgotFight_UltraInstinctTheme.ogg"
 "L'instinct surdéveloppé d'Urgo lui indiqua qu'il était sur le point de se faire dépouiller."
 "Pris d'un excès de rage, il prit son couperet et le lança sur notre capitaine."
 
@@ -155,6 +156,8 @@ menu:
         show urgo_dodge
         "Le lancer fut évité aisément par une gracieuse rotation du bassin de notre héros."
         show urgo_dodge2
+        voice "doublages_jp1/scene2/scene2_lucien0.ogg"
+        play sound "sound/sound_AxeBlowToTheFlesh.ogg"
         "Lucien en revanche ne savait pas faire ce genre de mouvements et prit le couperet dans les côtes, ce qui lui arracha un cri de douleur."
         show urgo_dodge3
         "Jean Plank le regarda d'un air dédaigneux puis décida de prendre son rôle de mentor au sérieux en montrant à Lucien \"Comment qu'on fait\"."
@@ -163,6 +166,7 @@ menu:
         "Jean Plank prit un air songeur."
         "Malheureusement, ce n'était vraiment pas le bon moment pour ça."
         show urgo_reflexion1
+        play sound "sound/sound_AxeBlowToTheFlesh.ogg"
         "Le couperet fila droit et alla se planter entre les deux yeux vitreux du capitaine."
         show urgo_reflexion2
         "Il s'écroula au sol, misérable."
@@ -198,6 +202,7 @@ voice "doublages_jp1/scene2/scene2_jp8.ogg"
 jp "Gibier de potence !"
 
 show bras
+play sound "sound/sound_SwordSlash.ogg"
 "Puis il lui trancha le bras gauche d'un grand coup de sabre."
 
 # voice "doublages_jp1/scene2/scene2_jp9.ogg" #jp "Ce ne sont pas de simples oranges !"
@@ -218,7 +223,7 @@ jp "Avait-il dit en partant fièrement."
 scene lucien_blessure
 play ambiance "sound/sound_forêtambient.ogg"
 play music "music/lucien_rituel.ogg"
-
+play sound "sound/sound_DeathBodyHittingGround.ogg"
 "En retournant vers la ville, Jean Plank remarqua alors que son comparse avait du mal à suivre."
 "A son teint livide pour une personne de sa couleur de peau ainsi qu'à la mare de sang qu'il laissait derrière lui, Jean Plank se dit qu'il allait peut-être devoir jeter un œil à la blessure de son ami."
 "Effectivement, la plaie était profonde et sans un médecin compétent, Lucien risquait d'y passer."
@@ -236,6 +241,7 @@ voice "doublages_jp1/scene3/scene3_lucien1.ogg"
 lucienintro "Toi, tu ne t'approches pas de moi avec tes techniques de charlatan !"
 
 show jp_attache_lucien
+voice " scene3_jp1.2.ogg"
 "Il fit alors s'allonger paisiblement Lucien."
 
 voice "doublages_jp1/scene3/scene3_lucien2.ogg"
@@ -245,6 +251,7 @@ show lucien_rituel
 "Il l'attacha solidement afin de pouvoir se concentrer sur le rituel puis disposa ses douze derniers tonneaux de poudre en cercle autour de son ami."
 "Il prit également grand soin d'en répandre sur le corps de Lucien."
 
+play ambiance "sound/sound_LeBonGigoDasticot.ogg"
 play sound "sound/meche_on_fire.ogg"
 "Il installa une mèche et puis mit le feu à l'aide du chien de son pistolet en entonnant des chants traditionnels Viking."
 
@@ -253,6 +260,7 @@ show lucien_rituel2
 
 scene ecran_noir
 play sound "sound/explosion_poudre.ogg"
+stop ambiance
 pause
 
 play music "music/lucien_transformation.ogg"
@@ -317,36 +325,36 @@ show jp_cloche
 
 show singedjp1
 stop sound
-voice "doublages_jp1/scene4/scene4_sj1.ogg"
+voice "doublages_jp1/scene4/scene4_singed1.ogg"
 sj "Jean Plank, mon vieil ami !"
 
 voice "doublages_jp1/scene4/scene4_jp2.ogg"
 jp "Il nous faut plus de poudre."
 
-voice "doublages_jp1/scene4/scene4_sj2.ogg"
+voice "doublages_jp1/scene4/scene4_singed2.ogg"
 sj "Toujours à l'essentiel à ce que je vois. Et désolé pour l'attente, j'avais une expérimentation sur le feu."
 
 voice "doublages_jp1/scene4/scene4_lucien1.ogg"
 lucien "Une expérimentation ?"
 
-voice "doublages_jp1/scene4/scene4_sj3.ogg"
+voice "doublages_jp1/scene4/scene4_singed3.ogg"
 sj "Oui mon jeune ami érudit ! Une expérience révolutionnaire ! Si mes travaux portent leurs fruits, cela bouleversera totalement notre vision du monde !"
 "Il allait proposer à Lucien de visiter son laboratoire, mais en voyant l'air impatient du capitaine, il se ravisa."
 
-voice "doublages_jp1/scene4/scene4_sj4.ogg"
+voice "doublages_jp1/scene4/scene4_singed4.ogg"
 sj "Plus de poudre donc... Je te remets la spéciale viking ?"
 
 voice "doublages_jp1/scene4/scene4_jp3.ogg"
 jp "Plutôt la \"Carnage et Brûlures\". Dans sa version portable, bien sûr."
 
-voice "doublages_jp1/scene4/scene4_sj5.ogg"
+voice "doublages_jp1/scene4/scene4_singed5.ogg"
 sj "Fort bien."
 
 show singed_poudre
 "Saint Gède descendit à la cave puis revint avec deux énormes tonneaux de poudre dans les bras."
 "Il les disposa sur le comptoir."
 
-voice "doublages_jp1/scene4/scene4_sj6.ogg"
+voice "doublages_jp1/scene4/scene4_singed6.ogg"
 sj "Et voilà ! Portable, comme convenu. Cela fera 500 serpents d'argent."
 
 voice "doublages_jp1/scene4/scene4_jp4.ogg"
@@ -358,7 +366,7 @@ jp "Comment ?"
 show singed_regard
 "Les yeux pénétrants de Saint Gède se plongèrent dans le regard bovin de Jean Plank."
 
-voice "doublages_jp1/scene4/scene4_sj7.ogg"
+voice "doublages_jp1/scene4/scene4_singed7.ogg"
 sj "500 serpents d'argent."
 
 menu:
@@ -409,7 +417,7 @@ menu:
         jp "Et c'est tout ?"
 
         show jp_paye3
-        voice "doublages_jp1/scene4/scene4_sj8.ogg"
+        voice "doublages_jp1/scene4/scene4_singed8.ogg"
         sj "Comment ça, tout ?"
 
         hide jp_paye3
@@ -417,7 +425,7 @@ menu:
         "Devant l'incrédulité de son ami, Saint Gède, grand humaniste, ne put s'empêcher de faire un geste."
 
         show jp_paye4
-        voice "doublages_jp1/scene4/scene4_sj9.ogg"
+        voice "doublages_jp1/scene4/scene4_singed9.ogg"
         sj"Bon tiens, si tu le désires, j'ai là une potion d'invincibilité expérimentale."
 
         hide jp_paye4
@@ -425,10 +433,11 @@ menu:
         jp "D'invincibilité ?"
 
         show jp_paye4
-        voice "doublages_jp1/scene4/scene4_sj10.ogg"
+        voice "doublages_jp1/scene4/scene4_singed10.ogg"
         sj "Expérimentale !"
 
-        voice "doublages_jp1/scene4/scene4_jp7.ogg"
+        #voice "doublages_jp1/scene4/scene4_jp8.ogg"
+        voice "doublages_jp1/scene4/scene4_jp8.1.ogg"
         "C'était véritablement un chouette objet."
         "Voici qui concluait les taches de ravitaillement de notre héros."
 
@@ -486,11 +495,8 @@ mf "Ah ouais ? Dans ce cas, comment tu expliques qu'elle soit propre ?"
 "Jean Plank savait qu'il devait passer à l'offensive sans quoi il ne pourrait garder la face."
 
 voice "doublages_jp1/scene5/scene5_jp5.ogg"
-jp "Il ne me semble pas t'avoir vu sur les quais quand je suis rentré ce mat..."
-"Il chercha du regard Lucien qui acquiesça d'un signe de tête."
-
-voice "doublages_jp1/scene5/scene5_jp6.ogg"
-jp "Ouais, ce matin !"
+jp "Il ne me semble pas t'avoir vu sur les quais quand je suis rentré ce matin !"
+#"Il chercha du regard Lucien qui acquiesça d'un signe de tête."
 
 voice "doublages_jp1/scene5/scene5_mf5.ogg"
 mf "Tu détournes le sujet."
@@ -508,7 +514,8 @@ voice "doublages_jp1/scene5/scene5_mf7.ogg"
 mf "Ouais j'ose, ouais !"
 
 stop ambiance
-show FIAK
+#if censure == 1:
+#    show EN_DLC_VENDU_PAR_20CHF
 "N'écoutant que leurs instincts les plus primaires, nos deux amants se lancèrent alors à corps perdu dans leur confrontation."
 
 show couple
@@ -593,7 +600,7 @@ show potion
 "L'espoir renaissait."
 
 show potion2
-"Notre charismatique personnage principal lâcha Miss Fourtout et ramassa la fiole, la buvant d'un trait."
+"Aussi charismatique qu'un personnage principal, Jean Plank lâcha Miss Fourtout ouis ramassa la fiole pour la boire d'un seul trait."
 "Il sentit alors tout son corps se remplir d'une puissance nouvelle."
 "Une vague de chaleur remonta de son ventre, lui brûlant la gorge avant d'irradier tout son être."
 "Il lui semblait que son corps allait se déchirer."
@@ -635,7 +642,7 @@ hide ruines_lucien
 "Miss Fourtout aussi avait disparu, elle aussi probablement désintégrée dans l'explosion malgré tous les efforts du capitaine pour la protéger."
 "Mais le pire était à venir pour Jean Plank."
 # "Lorsqu'il voulut remettre son tricorne, il ne le trouva point."
-"Pour la première fois depuis des années, il sentit la brise marin caresser son crâne."
+"Pour la première fois depuis des années, il sentit la brise marine caresser son crâne."
 
 show lucien_degout
 "Lucien s'approcha alors de lui, un air de dégoût fixé sur son visage ébène."
@@ -657,6 +664,7 @@ show miroir2
 
 play sound "jp_singed_unhuman_scream"
 "Le cri que Jean Plank poussa ne pourrait être décrit."
+play sound "sound/sound_UnhumanScream.ogg"
 "Une sonorité à la limite de l'inhumain, traduisant la haine qui rongeait son cœur et l'infinie tristesse qui l'envahissait."
 "Il se dépêcha d'aller ramasser son tricorne, mais rien n'effacerait ce qu'il ressentait actuellement."
 "Il était amer de regrets, de regrets de ne pas avoir compris ce qui était réellement important durant toutes ces années."
@@ -731,11 +739,11 @@ jp "Où... Où suis-je ?"
 play music "music/valhalla.ogg"
 show discover_valhalla
 pause
-"Jean Plank se rappela alors de la formule interdite impie apprise lors de son voyage."
-"Il hurla de toutes ses forces : "
+#"Jean Plank se rappela alors de la formule interdite impie apprise lors de son voyage."
+#"Il hurla de toutes ses forces : "
 
-voice "doublages_jp1/scene7/scene7_jp2.ogg"
-jp "KOKO WA DOKO ?! TIENMEN JDONC SECIÉ RAISTE DENTARA JEGRIMALKIN !"
+#voice "doublages_jp1/scene7/scene7_jp2.ogg"
+#jp "KOKO WA DOKO ?! TIENMEN JDONC SECIÉ RAISTE DENTARA JEGRIMALKIN !"
 
 
 show valhalla1
@@ -783,43 +791,50 @@ $renpy.sound.set_volume(0.00, delay=0, channel='music')
 play alder "music/Crayon.ogg"
 show jp_crayon_valhalla
 voice "doublages_jp1/scene7/scene7_jp5.ogg"
-jp "Odin, j'ai une vengeance à accomplir."
+jp "Odin..."
 
 show odin_crayon
-
 voice "doublages_jp1/scene7/scene7_odin5.ogg"
-odin "Mais tu es mort Jean Plank, il t'est désormais impossible de retourner dans le monde des vivants."
-hide odin_crayon
+odin "Oui Jean Plank ?"
 
+hide odin_crayon
 voice "doublages_jp1/scene7/scene7_jp6.ogg"
+jp "J'ai une vengeance à accomplir."
+
+show odin_crayon
+voice "doublages_jp1/scene7/scene7_odin6.ogg"
+odin "Mais tu es mort Jean Plank, il t'est désormais impossible de retourner dans le monde des vivants."
+
+hide odin_crayon
+voice "doublages_jp1/scene7/scene7_jp7.ogg"
 jp "Mais il suffirait que tu me donnes tes pouvoirs."
 
 show odin_crayon
-
+voice "doublages_jp1/scene7/scene7_odin7.ogg"
 odin "Jean, je ne peux... Mes responsabilités..."
-hide odin_crayon
 
-voice "doublages_jp1/scene7/scene7_jp7.ogg"
+hide odin_crayon
+voice "doublages_jp1/scene7/scene7_jp8.ogg"
 jp "Ne t'en fais pas, je ferais de toi un gueux."
 
 show odin_crayon
-
+voice "doublages_jp1/scene7/scene7_odin8.ogg"
 odin "Mais Jean..."
+
 hide odin_crayon
-
-voice "doublages_jp1/scene7/scene7_jp8.ogg"
-jp "Od', c'est un sacrifice nécessaire."
-
-show odin_crayon
-
-odin "Nécessaire ?"
-hide odin_crayon
-
 voice "doublages_jp1/scene7/scene7_jp9.ogg"
-jp "Oui, Od'. Pour notre gloire éternelle."
+jp "C'est un sacrifice nécessaire."
 
 show odin_crayon
+voice "doublages_jp1/scene7/scene7_odin9.ogg"
+odin "Nécessaire ?"
 
+hide odin_crayon
+voice "doublages_jp1/scene7/scene7_jp10.ogg"
+jp "Oui, Odin. Pour notre gloire éternelle !"
+
+show odin_crayon
+voice "doublages_jp1/scene7/scene7_odin10.ogg"
 odin "Je comprends Jean. Quelqu'un doit le faire."
 
 stop alder
@@ -860,7 +875,7 @@ label credits:
 "Crédits :"
 "Scénariste : Shiroi Maô\nConseiller scénaristique : Styrale"
 "Réalisation : Monsieur Shiroi Maô\nCo-réalisateur : Monsieur Styrale\n"
-"Montage : Le Sublime Shiroi Maô\nAssistant montage : L'astucieux Monsieur Styrale\n"
+"Montage : Le Sublime Shiroi Maô n'en a pas fait un seul\nMonteur graphiste : L'astucieux Monsieur Styrale\n"
 "Directeur de recherche : Le très estimé Lucas HAMMERER\nAssistant chercheur : Thomas BOCQUET"
 "Directeur artistique : Séphultura \nConseiller artistique : LucianAteMyKFC"
 "Directeurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX\n"
