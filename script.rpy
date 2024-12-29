@@ -251,11 +251,11 @@ show lucien_rituel
 "Il l'attacha solidement afin de pouvoir se concentrer sur le rituel puis disposa ses douze derniers tonneaux de poudre en cercle autour de son ami."
 "Il prit également grand soin d'en répandre sur le corps de Lucien."
 
-play ambiance "sound/sound_LeBonGigoDasticot.ogg"
-play sound "sound/meche_on_fire.ogg"
+play ambiance "sound/sound_LeBonGigoDasticot.ogg" volume 0.6 fadein 0.5
+play sound "sound/meche_on_fire.ogg" 
 "Il installa une mèche et puis mit le feu à l'aide du chien de son pistolet en entonnant des chants traditionnels Viking."
 
-show lucien_rituel2
+show lucien_rituel2  
 "Enfin, il courut de toutes ses forces se cacher derrière un arbre."
 
 scene ecran_noir
@@ -287,7 +287,17 @@ voice "doublages_jp1/scene3/scene3_jp2.ogg"
 jp "Qu'est ce donc là que ce subterfuge ?!"
 
 voice "doublages_jp1/scene3/scene3_lucien4.ogg"
-lucien "Un subterfuge ? Sache jeune blanc-bec, que ça ce n'est pas un subterfuge, ça c'est la Magie. La Magie qui remplit les esprits, la Magie qui fait tourner le monde."
+lucien "Un subterfuge ? Sache jeune blanc-bec, que ça ce n'est pas un subterfuge. Il s'agit de magie veritable !"
+#"Un subterfuge, c'est quand on te fait croire que c'est la petite souris qui 
+# te ramene deux pièces d'or sous ton coussin après que le cousin Gregoire t'a pété une dent."
+#"C'est quand on te fait croire que c'est le père gragas qui met les cadeaux sous le sapin à noel"
+#"C'est quand tu pense qu'on t'as réelement volé ton nez ou que voter sert à quelque chose" 
+#"Ou c'est quand ta mère t'explique que papa va bientot revenir alors que ça fait 4 mois 
+# qu'on ne la pas vu ni lui, ni cette chaudasse de cousine Betty !"
+#"Tu m'a menti maman tu m'a menti  ! ET !..."
+#"Je m'eloigne du sujet. Un peu de concentration... 
+#Je reprends. Oh tu m'écoute là ? Je préfère. Je disais donc : ceci n'est pas un subterfuge."
+#"Ceci est la magie, la magie qui fait rever les expris, la Magie qui fait tourner le monde."
 
 "Jean Plank le regardait perplexe."
 
