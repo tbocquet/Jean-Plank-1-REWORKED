@@ -33,6 +33,7 @@ $ censure = 0
 
 scene jp_arrive
 
+$renpy.sound.set_volume(0.4, delay=0, channel='ambiance')
 play ambiance "sound/sound_mouettes.ogg"
 play music "music/jp_theme.ogg"
 "Jean Plank était content."
@@ -260,7 +261,9 @@ show lucien_rituel2
 "Enfin, il courut de toutes ses forces se cacher derrière un arbre."
 
 scene ecran_noir
+stop music
 play sound "sound/explosion_poudre.ogg"
+voice "sound/sound_LucienExplosionScream.ogg"
 stop ambiance
 pause
 
@@ -303,7 +306,7 @@ lucien "Un subterfuge ? Sache jeune blanc-bec, que ça ce n'est pas un subterfug
 "Jean Plank le regardait perplexe."
 
 voice "doublages_jp1/scene3/scene3_lucien5.ogg"
-lucien "C'est une légende de mon village. Celle que Maman elle me racontait le soir devant le feu. Elle disait : la Magie noire c'est le vaudou c'est le mal, mais le feu, lui, il est là pour t'éclairer. "
+lucien "Je comprends que tu puisses être confus. Mais c'est une légende très connue dans mon village."
 
 "Jean Plank ainsi convaincu, il était temps d'aller chercher de la poudre."
 stop sound
@@ -639,7 +642,6 @@ pause
 #                                                                                                                           #
 #############################################################################################################################
 
-play music "music/ruines.ogg"
 stop sound
 show ruines1
 "Jean Plank regarda autour de lui :"
@@ -673,10 +675,10 @@ show miroir2
 "C'était celui de Saint Gède !"
 "Saint Gède lui avait volé son visage !"
 
-play sound "jp_singed_unhuman_scream"
 "Le cri que Jean Plank poussa ne pourrait être décrit."
 play sound "sound/sound_UnhumanScream.ogg"
 "Une sonorité à la limite de l'inhumain, traduisant la haine qui rongeait son cœur et l'infinie tristesse qui l'envahissait."
+stop sound
 "Il se dépêcha d'aller ramasser son tricorne, mais rien n'effacerait ce qu'il ressentait actuellement."
 "Il était amer de regrets, de regrets de ne pas avoir compris ce qui était réellement important durant toutes ces années."
 "La faible voix de Miss Fourtout se fit alors entendre."
@@ -705,13 +707,17 @@ voice "doublages_jp1/scene6/scene6_mf3.ogg"
 mf "Si c'est pour voir ta gueule tous les jours, ça ne vaut vraiment pas le coup !"
 "Apaisée, elle ferma les yeux et mourut paisiblement sous le regard impuissant de Jean Plank."
 
-
+#play music "music/Castle in the sky - Joe Hisaishi - The Final Showdown CitS.ogg"
+$renpy.sound.set_volume(0.7, delay=0, channel='music')
+#play music "music/Ten Piedad.ogg"
+play music "music/Darkest Dungeon OST - The Final Combat.ogg" fadeout 1.0
 "Jean Plank avait désormais tout perdu."
 
 
 
 scene jp_larmes
-play music "music/kill_la_kill_ost.ogg"
+#play music "music/kill_la_kill_ost.ogg"
+
 "Pour la première fois de sa vie, des larmes (mais des larmes d'homme) coulèrent de ses yeux."
 "La rage l'inonda, lui faisant oublier la douleur."
 "Oui! Il était désormais prêt à perdre bien plus encore !"
@@ -849,22 +855,25 @@ voice "doublages_jp1/scene7/scene7_odin10.ogg"
 odin "Je comprends Jean. Quelqu'un doit le faire."
 
 stop alder
-$renpy.sound.set_volume(1.00, delay=0, channel='music')
-
-show odin_pouvoirs
-stop music
+$renpy.sound.set_volume(1.00, delay=0, channel='sound')
+$renpy.sound.set_volume(0.00, delay=0, channel='ambiance')
 play sound "music/transfusion_power.ogg"
+play ambiance "sound/sound_forêtambient.ogg"
+show odin_pouvoirs
 "Alors Odin donna l'intégralité de ses pouvoirs à Jean Plank."
 window hide
 pause
 stop sound
+$renpy.sound.set_volume(1.00, delay=0, channel='ambiance')
 show odin_gueux
 "Conformément à sa promesse, Jean fit d'Odin un simple mortel avant de l'envoyer sur Terre dans une VIEILLE FERME DE MERDE."
-# play sound "demerde.ogg"
+play sound "sound/sound_VieilleFermeDeMerdeLeft.ogg"
 window hide
 pause
-
-play music "music/kill_la_kill_ost.ogg"
+stop ambiance
+stop sound
+$renpy.sound.set_volume(1.00, delay=0, channel='music')
+play music ["music/kill_la_kill_ost.ogg","music/kpop.ogg"]
 
 scene jp_odin
 "Du haut du Valhalla, Jean Plank était prêt."
@@ -882,19 +891,28 @@ scene jp_odin
 #############################################################################################################################
 
 label credits:
-
+"Cette histoire réelle est basé sur des faits réels et tirés du cerveau ravagé d'un homme ravagé."
 "Crédits :"
-"Scénariste : Shiroi Maô\nConseiller scénaristique : Styrale"
-"Réalisation : Monsieur Shiroi Maô\nCo-réalisateur : Monsieur Styrale\n"
-"Montage : Le Sublime Shiroi Maô n'en a pas fait un seul\nMonteur graphiste : L'astucieux Monsieur Styrale\n"
+"Scénariste : Jean PRANK"
+"Comité de validation scénaristique : Styrale"
+"Réalisateurs : Lucas HAMMERER et Thomas BOCQUET\n"
+"Montage : Le Sublime Shiroi Maô n'en a pas fait un seul\nMonteur et Graphiste : L'astucieux Monsieur Styrale qui fait tout seul ce travail colossal."
 "Directeur de recherche : Le très estimé Lucas HAMMERER\nAssistant chercheur : Thomas BOCQUET"
-"Directeur artistique : Séphultura \nConseiller artistique : LucianAteMyKFC"
-"Directeurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX\n"
-"Doublage :"
-"MissFourtout : La très généreuse génitrice de Monsieur Styrale\nJeanPlank, Lucien le magicien : ShiroiMaô qui en reste sans voix\n"
+"Directeur artistique : LucianAteMyKFC.\nCo-directrice artistique : Cupcake333."
+"Directeur du centre de correction orthographique : LucianAteMyKFC"
+"Directeurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX"
+"Ingénieur son : MC DA"
+"Scrum master : InsaneInZeHead \nHappiness manager : Jean-Pierre COLERE"
+"Web Master : Gurimalukin"
+"Doublages :"
+"MissFourtout : La très généreuse génitrice de Monsieur Styrale\n"
+"Jean Plank, Lucien le magicien : Jean PRANK qui en reste sans voix\n"
 "Urgo, Saint Gède et Odin : Monsieur Styrale qui a donc acquis une expérience professionelle dans le doublage"
-"Remerciements à la famille de Monsieur Lucas pour avoir le soutien moral et les studios"
+"Remerciements :"
+"Remerciements à la famille et aux amis"
+"...et aux voitures !"
 "Remerciement à Monsieur Simon comme catalyseur de haine et surtout pour NE PAS AVOIR ÉTÉ LÀ !"
+"Ça doit bien être la seule chose qui n'a pas changé avec le rework de cet épisode..."
 if potion == 0:
     "Merci d'avoir joué à cet épisode ! La suite, Jean Plank II - Valhalla U Akbar, est déjà disponible sur jeanplank.blbl.ch"
 
