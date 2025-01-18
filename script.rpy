@@ -241,7 +241,7 @@ voice "doublages_jp1/scene3/scene3_lucien1.ogg"
 lucienintro "Toi, tu ne t'approches pas de moi avec tes techniques de charlatan !"
 
 show jp_attache_lucien
-voice " scene3_jp1.2.ogg"
+voice "doublages_jp1/scene3/scene3_jp1.2.ogg"
 "Il fit alors s'allonger paisiblement Lucien."
 
 voice "doublages_jp1/scene3/scene3_lucien2.ogg"
@@ -251,7 +251,8 @@ show lucien_rituel
 "Il l'attacha solidement afin de pouvoir se concentrer sur le rituel puis disposa ses douze derniers tonneaux de poudre en cercle autour de son ami."
 "Il prit également grand soin d'en répandre sur le corps de Lucien."
 
-play ambiance "sound/sound_LeBonGigoDasticot.ogg" volume 0.6 fadein 0.5
+play ambiance "sound/sound_LeBonGigoDasticot.ogg"
+$renpy.sound.set_volume(0.60, delay=0, channel='ambiance')
 play sound "sound/meche_on_fire.ogg" 
 "Il installa une mèche et puis mit le feu à l'aide du chien de son pistolet en entonnant des chants traditionnels Viking."
 
