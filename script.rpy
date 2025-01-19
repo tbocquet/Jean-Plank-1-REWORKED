@@ -537,6 +537,8 @@ show couple
 "On ne savait pas trop qui avait finalement gagné, mais Lucien avait pu prendre beaucoup de notes."
 
 play music "music/meteore.ogg"
+play ambiance "sound/sound_VulcanoAmbiance.ogg"
+play sound "sound/sound_Tintin.ogg"
 "Tout semblait aller pour le mieux quand tout à coup, un vacarme assourdissant se fit entendre."
 
 show meteore1
@@ -633,8 +635,9 @@ window hide
 stop music
 play sound "sound/impact.ogg"
 show ecran_noir
-pause
-
+pause 15
+stop ambiance
+stop sound
 
 #############################################################################################################################
 #                                                                                                                           #
@@ -642,7 +645,7 @@ pause
 #                                                                                                                           #
 #############################################################################################################################
 
-stop sound
+play music "music/ruines.ogg"
 show ruines1
 "Jean Plank regarda autour de lui :"
 "Il ne restait que des ruines."
