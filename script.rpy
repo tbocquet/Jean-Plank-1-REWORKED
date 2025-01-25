@@ -537,6 +537,7 @@ show couple
 "On ne savait pas trop qui avait finalement gagné, mais Lucien avait pu prendre beaucoup de notes."
 
 play music "music/meteore.ogg"
+$renpy.sound.set_volume(0.8, delay=0, channel='ambiance')
 play ambiance "sound/sound_VulcanoAmbiance.ogg"
 play sound "sound/sound_Tintin.ogg"
 "Tout semblait aller pour le mieux quand tout à coup, un vacarme assourdissant se fit entendre."
@@ -674,8 +675,9 @@ show miroir
 
 show miroir2
 "Et paniqué, il regarda."
-"Mais ce ne fut pas son visage qu'il y vit."
+"Mais ce ne fut pas son visage qu'il y vit." 
 "C'était celui de Saint Gède !"
+#play sound "sound/sound_SignedExperimentalVeryFar.ogg" volume 0.5
 "Saint Gède lui avait volé son visage !"
 
 "Le cri que Jean Plank poussa ne pourrait être décrit."
@@ -711,7 +713,7 @@ mf "Si c'est pour voir ta gueule tous les jours, ça ne vaut vraiment pas le cou
 "Apaisée, elle ferma les yeux et mourut paisiblement sous le regard impuissant de Jean Plank."
 
 #play music "music/Castle in the sky - Joe Hisaishi - The Final Showdown CitS.ogg"
-$renpy.sound.set_volume(0.7, delay=0, channel='music')
+$renpy.sound.set_volume(0.4, delay=0, channel='music')
 #play music "music/Ten Piedad.ogg"
 play music "music/Darkest Dungeon OST - The Final Combat.ogg" fadeout 1.0
 "Jean Plank avait désormais tout perdu."
