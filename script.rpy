@@ -207,7 +207,7 @@ play sound "sound/sound_SwordSlash.ogg"
 "Puis il lui trancha le bras gauche d'un grand coup de sabre."
 
 # voice "doublages_jp1/scene2/scene2_jp9.ogg" #jp "Ce ne sont pas de simples oranges !"
-"Et oui, Jean Plank était aussi sanguinaire que les oranges qu'il consomme."
+"Et oui, Jean Plank est aussi sanguinaire que les oranges qu'il consomme."
 
 show jp_sort_urgo
 voice "doublages_jp1/scene2/scene2_jp9.ogg"
@@ -226,7 +226,7 @@ play ambiance "sound/sound_forêtambient.ogg"
 play music "music/lucien_rituel.ogg"
 play sound "sound/sound_DeathBodyHittingGround.ogg"
 "En retournant vers la ville, Jean Plank remarqua alors que son comparse avait du mal à suivre."
-"A son teint livide pour une personne de sa couleur de peau ainsi qu'à la mare de sang qu'il laissait derrière lui, Jean Plank se dit qu'il allait peut-être devoir jeter un œil à la blessure de son ami."
+"A son teint livide pour une personne de sa couleur de peau ainsi qu'à la mare de sang qu'il laissait derrière lui, Jean Plank se dit qu'il allait peut-être devoir jeter un œil à la blessure de son apprenti."
 "Effectivement, la plaie était profonde et sans un médecin compétent, Lucien risquait d'y passer."
 "Mais Jean Plank n'était pas n'importe qui ! Il avait acquis, au cours de ses voyages dans le Grand Nord, de nombreuses connaissances en médecine viking."
 "Il regarda Lucien et lui dit avec assurance :"
@@ -414,7 +414,7 @@ menu:
         "Du côté de Plank - Jean de son prénom - la satisfaction d'avoir fait une bonne affaire le poussa vers la taverne pour une soirée de beuverie et de débauche."
 
         show taverne2
-        "Très fier de son audacieux casse, il s'écroula ivre mort sur la table au bout de la quatrième bouteille de Rhum."
+        "Très fier de son audacieux casse, il s'écroula ivre mort sur la table au bout de la quatrième bouteille de Rhum®."
 
     "Payer ce grand prince":
         $ potion = 1
@@ -424,7 +424,7 @@ menu:
         $renpy.sound.set_volume(1.00, delay=0, channel='music')
         "Un peu à l'encontre de ses principes, Jean Plank se résolut à lâcher une bourse à Saint Gède."
         "Ce dernier, très surpris par l'action du capitaine, le remercia chaleureusement."
-        "Il allait raccompagner à la porte à nos deux complices lorsque Jean Plank s'exclama :"
+        "Il allait raccompagner nos deux complices à la porte lorsque Jean Plank s'exclama :"
 
         show jp_paye2
         voice "doublages_jp1/scene4/scene4_jp6.ogg"
@@ -453,11 +453,11 @@ menu:
         #voice "doublages_jp1/scene4/scene4_jp8.ogg"
         voice "doublages_jp1/scene4/scene4_jp8.1.ogg"
         "C'était véritablement un chouette objet."
-        "Voici qui concluait les taches de ravitaillement de notre héros."
+        "Voici qui concluait les tâches de ravitaillement de notre héros."
 
         show taverne2
         play music "music/jp_ivre.ogg"
-        "N'ayant rien d'autre à faire, il se dirigea vers le bar où, comme à son habitude, il descendit quatre bouteilles de Rhum avant de s'écrouler ivre mort."
+        "N'ayant rien d'autre à faire, il se dirigea vers le bar où, comme à son habitude, il descendit quatre bouteilles de Rhum® avant de s'écrouler ivre mort."
 
 #############################################################################################################################
 #                                                                                                                           #
@@ -655,7 +655,7 @@ show ruines_lucien
 
 hide ruines_lucien
 "Le trésor de Jean Plank avait disparu avec sa demeure. Tout avait été pulvérisé par la chaleur de l'explosion."
-"Miss Fourtout aussi avait disparu, elle aussi probablement désintégrée dans l'explosion malgré tous les efforts du capitaine pour la protéger."
+"Miss Fourtout aussi avait disparu — probablement désintégrée dans l'explosion — malgré tous les efforts du capitaine pour la protéger."
 "Mais le pire était à venir pour Jean Plank."
 # "Lorsqu'il voulut remettre son tricorne, il ne le trouva point."
 "Pour la première fois depuis des années, il sentit la brise marine caresser son crâne."
@@ -732,7 +732,7 @@ scene jp_larmes
 "Un complot infâme fomenté par quelqu'un qui existe, mais qu'on ne sait pas encore qui c'est !"
 "Mais peu importe qui était ce scélérat, il allait le regretter."
 "Il allait payer !"
-"L'heure de la vengeance a sonné."
+"Le temp de la vengeance était arrivé."
 
 jump credits
 
@@ -883,18 +883,17 @@ scene jp_odin
 "Il avait perdu son trésor, il avait perdu sa femme, il avait perdu son magicien."
 "Il avait perdu la vie."
 "Plus rien à perdre, tout à reprendre."
-"L'heure de la vengeance est arrivée !"
-
-
+"Le temp de la vengeance était arrivé."
 
 #############################################################################################################################
 #                                                                                                                           #
 #                                                        CREDITS                                                            #
 #                                                                                                                           #
 #############################################################################################################################
-
+pause
 label credits:
 "Cette histoire réelle est basé sur des faits réels et tirés du cerveau ravagé d'un homme ravagé."
+pause
 "Crédits :"
 "Scénariste : Jean PRANK"
 "Comité de validation scénaristique : Styrale"
@@ -904,16 +903,15 @@ label credits:
 "Directeur artistique : LucianAteMyKFC.\nCo-directrice artistique : Cupcake333."
 "Directeur du centre de correction orthographique : LucianAteMyKFC"
 "Directeurs Audio : Jean-Eudes PATRÉCHER et Gontran PEUCOUTEUX"
-"Ingénieur son : MC DA"
+"Ingénieur son : Mc DA"
 "Scrum master : InsaneInZeHead \nHappiness manager : Jean-Pierre COLERE"
-"Web Master : Gurimalukin"
+"Wuebu Masuteru : Gurimarukin"
 "Doublages :"
 "MissFourtout : La très généreuse génitrice de Monsieur Styrale\n"
 "Jean Plank, Lucien le magicien : Jean PRANK qui en reste sans voix\n"
 "Urgo, Saint Gède et Odin : Monsieur Styrale qui a donc acquis une expérience professionelle dans le doublage"
-"Remerciements :"
-"Remerciements à la famille et aux amis"
-"...et aux voitures !"
+"Remerciements à la famille."
+"Merci à Rhum® d'avoir sponsorisé ce jeu."
 "Remerciement à Monsieur Simon comme catalyseur de haine et surtout pour NE PAS AVOIR ÉTÉ LÀ !"
 "Ça doit bien être la seule chose qui n'a pas changé avec le rework de cet épisode..."
 if potion == 0:
