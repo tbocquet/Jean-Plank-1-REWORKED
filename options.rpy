@@ -15,7 +15,7 @@
 ##
 ## La chaîne de caractère contenu dans _() est éligible à la traduction.
 
-define config.name = _("JeanPlank1REMASTER2")
+define config.name = _("Jean Plank : Naissance des Flammes de la Vengeance")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -40,7 +40,7 @@ define gui.about = _("Jean Plank est un Visual Novel parodique et n'est en aucun
 ## l’exécutable. Il ne doit contenir que des caractères ASCII et ne doit pas
 ## contenir d’espace, de virgules ou de points-virgules.
 
-define build.name = "JeanPlank1REMASTER2"
+define build.name = "JeanPlank1-Rework"
 
 
 ## Sons et musiques ############################################################
