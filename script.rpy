@@ -734,7 +734,7 @@ scene jp_larmes
 "Un complot infâme fomenté par quelqu'un qui existe, mais qu'on ne sait pas encore qui c'est !"
 "Mais peu importe qui était ce scélérat, il allait le regretter."
 "Il allait payer !"
-"Le temp de la vengeance était arrivé."
+"Le temps de la vengeance était arrivé."
 
 jump credits
 
@@ -746,19 +746,24 @@ jump credits
 
 label scene_valhala:
 
-show ecran_noir
+window hide
 stop music
 play sound "sound/impact.ogg"
+show ecran_noir
+pause 15
+stop ambiance
+stop sound
 pause
 
 hide ecran_noir
 stop sound
 show jp_perdu
 
+play music "music/valhalla.ogg" fadein 2
 voice "doublages_jp1/scene7/scene7_jp1.ogg"
 jp "Où suis-je ?"
 
-play music "music/valhalla.ogg"
+
 show discover_valhalla
 pause
 #"Jean Plank se rappela alors de la formule interdite impie apprise lors de son voyage."
@@ -885,7 +890,7 @@ scene jp_odin
 "Il avait perdu son trésor, il avait perdu sa femme, il avait perdu son magicien."
 "Il avait perdu la vie."
 "Plus rien à perdre, tout à reprendre."
-"Le temp de la vengeance était arrivé."
+"Le temps de la vengeance était arrivé."
 
 #############################################################################################################################
 #                                                                                                                           #
@@ -911,7 +916,7 @@ pause
 "Doublages :"
 "MissFourtout : La très généreuse génitrice de Monsieur Styrale\n"
 "Jean Plank, Lucien le magicien : Jean PRANK qui en reste sans voix\n"
-"Urgo, Saint Gède et Odin : Monsieur Styrale qui a donc acquis une expérience professionelle dans le doublage"
+"Urgo, Saint Gède et Odin : Monsieur Styrale qui a donc acquis une expérience professionelle dans le doublage."
 "Remerciements à la famille."
 "Merci à Rhum® d'avoir sponsorisé ce jeu."
 "Remerciement à Monsieur Simon comme catalyseur de haine et surtout pour NE PAS AVOIR ÉTÉ LÀ !"
